@@ -17,6 +17,7 @@ public class BankAccount {
     }
 
     public void deposit(double sum){
+        if (sum <= 0) throw new IllegalArgumentException("Must deposit a positive number");
         balance = balance + sum;
     }
     public void withdraw(double sum){
